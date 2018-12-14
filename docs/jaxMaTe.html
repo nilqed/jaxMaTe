@@ -1,0 +1,1263 @@
+<!--?xml version="1.0" encoding="utf-8" ?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/">
+<title>jaxMaTe v0.0.2</title>
+
+
+
+
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style><style type="text/css">
+
+/*
+ * Stylesheet overrides for ReSTview
+ */
+
+/* Some breathing space for the text */
+
+body {
+    margin: 3em;
+    max-width: 50em;
+}
+
+/* Monospace text */
+
+tt {
+    color: #234F32;
+}
+
+/* Doctest blocks */
+
+blockquote > pre.doctest-block {
+    margin-left: 0;
+}
+
+/* Literal blocks */
+
+pre.literal-block {
+    color: #AA4400;
+}
+
+/* Block quotations */
+
+blockquote {
+    margin-left: 2em;  /* to match with pre.code et al */
+    margin-right: 2em;
+}
+
+/* Code blocks */
+
+pre.code {
+    background: inherit;
+}
+
+/* Footnotes */
+
+a.footnote-reference,
+a.fn-backref {
+    font-size: xx-small;
+    vertical-align: super;
+    line-height: normal;
+    text-decoration: none;
+}
+a.footnote-reference:hover,
+a.fn-backref:hover {
+    text-decoration: underline;
+}
+
+table.footnote {
+    border: none;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 20px;
+    margin-right: 0.5em;
+    font-size: small;
+}
+table.footnote td {
+    border: none;
+    padding-top: 1em;
+    padding-left: 0px;
+}
+table.footnote tr:first-child > td.label {
+    border-top: 1px solid #eee;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+table.footnote + table.footnote {
+    margin-top: 0;
+}
+table.footnote + table.footnote td {
+    border: none;
+    padding-top: 0;
+}
+
+/* System messages (aka errors) */
+
+div.system-messages h1 {
+    color: red;
+}
+div.system-message {
+    border: none;
+    border-left: 1ex solid red;
+    margin-left: -3em;
+    margin-top: 0;
+    padding-left: 4.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: red;
+    background: #fff8f8;
+}
+div.system-message p.system-message-title {
+    margin-top: 0;
+    font-weight: bold;
+}
+
+</style><style type="text/css">
+
+/*
+*   math2html: convert LaTeX equations to HTML output.
+*
+*   Copyright (C) 2009,2010 Alex Fernández
+*
+*   Released under the terms of the `2-Clause BSD license'_, in short:
+*   Copying and distribution of this file, with or without modification,
+*   are permitted in any medium without royalty provided the copyright
+*   notice and this notice are preserved.
+*   This file is offered as-is, without any warranty.
+*
+* .. _2-Clause BSD license: http://www.spdx.org/licenses/BSD-2-Clause
+*
+*   Based on eLyXer: convert LyX source files to HTML output.
+*   http://elyxer.nongnu.org/
+*/
+/* --end--
+* CSS file for LaTeX formulas.
+*/
+
+/* Formulas */
+.formula {
+	text-align: center;
+	font-family: "Droid Serif", "DejaVu Serif", "STIX", serif;
+	margin: 1.2em 0;
+}
+span.formula {
+	white-space: nowrap;
+}
+div.formula {
+	padding: 0.5ex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Basic features */
+a.eqnumber {
+	display: inline-block;
+	float: right;
+	clear: right;
+	font-weight: bold;
+}
+span.unknown {
+	color: #800000;
+}
+span.ignored, span.arraydef {
+	display: none;
+}
+.formula i {
+	letter-spacing: 0.1ex;
+}
+
+/* Alignment */
+.align-left, .align-l {
+	text-align: left;
+}
+.align-right, .align-r {
+	text-align: right;
+}
+.align-center, .align-c {
+	text-align: center;
+}
+
+/* Structures */
+span.overline, span.bar {
+	text-decoration: overline;
+}
+.fraction, .fullfraction {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+.fraction .fraction {
+	font-size: 80%;
+	line-height: 100%;
+}
+span.numerator {
+	display: block;
+}
+span.denominator {
+	display: block;
+	padding: 0ex;
+	border-top: thin solid;
+}
+sup.numerator, sup.unit {
+	font-size: 70%;
+	vertical-align: 80%;
+}
+sub.denominator, sub.unit {
+	font-size: 70%;
+	vertical-align: -20%;
+}
+span.sqrt {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.1ex;
+}
+sup.root {
+	font-size: 70%;
+	position: relative;
+	left: 1.4ex;
+}
+span.radical {
+	display: inline-block;
+	padding: 0ex;
+	font-size: 150%;
+	vertical-align: top;
+}
+span.root {
+	display: inline-block;
+	border-top: thin solid;
+	padding: 0ex;
+	vertical-align: middle;
+}
+span.symbol {
+	line-height: 125%;
+	font-size: 125%;
+}
+span.bigsymbol {
+	line-height: 150%;
+	font-size: 150%;
+}
+span.largesymbol {
+	font-size: 175%;
+}
+span.hugesymbol {
+	font-size: 200%;
+}
+span.scripts {
+	display: inline-table;
+	vertical-align: middle;
+}
+.script {
+	display: table-row;
+	text-align: left;
+	line-height: 150%;
+}
+span.limits {
+	display: inline-table;
+	vertical-align: middle;
+}
+.limit {
+	display: table-row;
+	line-height: 99%;
+}
+sup.limit, sub.limit {
+	line-height: 100%;
+}
+span.symbolover {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 100%;
+	bottom: 0.5em;
+	width: 0px;
+}
+span.withsymbol {
+	display: inline-block;
+}
+span.symbolunder {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 80%;
+	top: 0.3em;
+	width: 0px;
+}
+
+/* Environments */
+span.array, span.bracketcases, span.binomial, span.environment {
+	display: inline-table;
+	text-align: center;
+	border-collapse: collapse;
+	margin: 0em;
+	vertical-align: middle;
+}
+span.arrayrow, span.binomrow {
+	display: table-row;
+	padding: 0ex;
+	border: 0ex;
+}
+span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
+	display: table-cell;
+	padding: 0ex 0.2ex;
+	line-height: 99%;
+	border: 0ex;
+}
+/*
+* CSS file for LaTeX formulas, extra stuff:
+* binomials, vertical braces, stackrel, fonts and colors.
+*/
+
+/* Inline binomials */
+span.binom {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 80%;
+}
+span.binomstack {
+	display: block;
+	padding: 0em;
+}
+
+/* Over- and underbraces */
+span.overbrace {
+	border-top: 2pt solid;
+}
+span.underbrace {
+	border-bottom: 2pt solid;
+}
+
+/* Stackrel */
+span.stackrel {
+	display: inline-block;
+	text-align: center;
+}
+span.upstackrel {
+	display: block;
+	padding: 0em;
+	font-size: 80%;
+	line-height: 64%;
+	position: relative;
+	top: 0.15em;
+
+}
+span.downstackrel {
+	display: block;
+	vertical-align: bottom;
+	padding: 0em;
+}
+
+/* Fonts */
+span.mathsf, span.textsf {
+	font-style: normal;
+	font-family: sans-serif;
+}
+span.mathrm, span.textrm {
+	font-style: normal;
+	font-family: serif;
+}
+span.text, span.textnormal {
+	font-style: normal;
+}
+span.textipa {
+	color: #008080;
+}
+span.fraktur {
+	font-family: "Lucida Blackletter", eufm10, blackletter;
+}
+span.blackboard {
+	font-family: Blackboard, msbm10, serif;
+}
+span.scriptfont {
+	font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+	font-style: italic;
+}
+
+/* Colors */
+span.colorbox {
+	display: inline-block;
+	padding: 5px;
+}
+span.fbox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 2px;
+}
+span.boxed, span.framebox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 5px;
+}
+
+
+</style><style type="text/css">
+pre .hll { background-color: #ffffcc }
+pre  { background: #ffffff; }
+pre .c { color: #888888 } /* Comment */
+pre .err { color: #FF0000; background-color: #FFAAAA } /* Error */
+pre .k { color: #008800; font-weight: bold } /* Keyword */
+pre .o { color: #333333 } /* Operator */
+pre .ch { color: #888888 } /* Comment.Hashbang */
+pre .cm { color: #888888 } /* Comment.Multiline */
+pre .cp { color: #557799 } /* Comment.Preproc */
+pre .cpf { color: #888888 } /* Comment.PreprocFile */
+pre .c1 { color: #888888 } /* Comment.Single */
+pre .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
+pre .gd { color: #A00000 } /* Generic.Deleted */
+pre .ge { font-style: italic } /* Generic.Emph */
+pre .gr { color: #FF0000 } /* Generic.Error */
+pre .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+pre .gi { color: #00A000 } /* Generic.Inserted */
+pre .go { color: #888888 } /* Generic.Output */
+pre .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+pre .gs { font-weight: bold } /* Generic.Strong */
+pre .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+pre .gt { color: #0044DD } /* Generic.Traceback */
+pre .kc { color: #008800; font-weight: bold } /* Keyword.Constant */
+pre .kd { color: #008800; font-weight: bold } /* Keyword.Declaration */
+pre .kn { color: #008800; font-weight: bold } /* Keyword.Namespace */
+pre .kp { color: #003388; font-weight: bold } /* Keyword.Pseudo */
+pre .kr { color: #008800; font-weight: bold } /* Keyword.Reserved */
+pre .kt { color: #333399; font-weight: bold } /* Keyword.Type */
+pre .m { color: #6600EE; font-weight: bold } /* Literal.Number */
+pre .s { background-color: #fff0f0 } /* Literal.String */
+pre .na { color: #0000CC } /* Name.Attribute */
+pre .nb { color: #007020 } /* Name.Builtin */
+pre .nc { color: #BB0066; font-weight: bold } /* Name.Class */
+pre .no { color: #003366; font-weight: bold } /* Name.Constant */
+pre .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+pre .ni { color: #880000; font-weight: bold } /* Name.Entity */
+pre .ne { color: #FF0000; font-weight: bold } /* Name.Exception */
+pre .nf { color: #0066BB; font-weight: bold } /* Name.Function */
+pre .nl { color: #997700; font-weight: bold } /* Name.Label */
+pre .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+pre .nt { color: #007700 } /* Name.Tag */
+pre .nv { color: #996633 } /* Name.Variable */
+pre .ow { color: #000000; font-weight: bold } /* Operator.Word */
+pre .w { color: #bbbbbb } /* Text.Whitespace */
+pre .mb { color: #6600EE; font-weight: bold } /* Literal.Number.Bin */
+pre .mf { color: #6600EE; font-weight: bold } /* Literal.Number.Float */
+pre .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
+pre .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
+pre .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+pre .sa { background-color: #fff0f0 } /* Literal.String.Affix */
+pre .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
+pre .sc { color: #0044DD } /* Literal.String.Char */
+pre .dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
+pre .sd { color: #DD4422 } /* Literal.String.Doc */
+pre .s2 { background-color: #fff0f0 } /* Literal.String.Double */
+pre .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
+pre .sh { background-color: #fff0f0 } /* Literal.String.Heredoc */
+pre .si { background-color: #eeeeee } /* Literal.String.Interpol */
+pre .sx { color: #DD2200; background-color: #fff0f0 } /* Literal.String.Other */
+pre .sr { color: #000000; background-color: #fff0ff } /* Literal.String.Regex */
+pre .s1 { background-color: #fff0f0 } /* Literal.String.Single */
+pre .ss { color: #AA6600 } /* Literal.String.Symbol */
+pre .bp { color: #007020 } /* Name.Builtin.Pseudo */
+pre .fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
+pre .vc { color: #336699 } /* Name.Variable.Class */
+pre .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
+pre .vi { color: #3333BB } /* Name.Variable.Instance */
+pre .vm { color: #996633 } /* Name.Variable.Magic */
+pre .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
+</style></head>
+<body>
+<div class="document" id="jaxmate-v0-0-2">
+<h1 class="title">jaxMaTe v0.0.2</h1>
+
+<div class="section" id="introduction">
+<h1>Introduction</h1>
+<p><tt class="docutils literal">JaxMaTe</tt> (Math<em>Jax</em> enabled <em>Ma</em>thematics <em>Te</em>rminal) is a generic web
+interface to various mathematical software that is able to emit <span class="formula"><i>LaTeX</i></span>
+code. The general idea is that it behaves like a common terminal/console,
+however, it runs in a browser (HTML widget) and renders any output enclosed
+in <tt class="docutils literal">$</tt> or <tt class="docutils literal">$$</tt> with MathJax.</p>
+<img alt="jaxmate_devel.png" src="jaxMaTe-Dateien/jaxmate_devel.png">
+<p>MathJax has the advantage (compared to other methods, e.g. sixel graphics
+in XTerm, MinTTy, <a class="reference external" href="https://github.com/nilqed/latex2sixel">LaTeX2Sixel</a>)
+that it is easy to get/copy the <span class="formula"><i>TeX</i></span> source code and to manipulate
+the appearance of the rendering (by right clicking on the output).</p>
+<p>Note that jaxMaTe is conceptually different from so called <em>notebooks</em>, like
+in <a class="reference external" href="https://jupyter.org/">Jupyter</a> or <a class="reference external" href="http://www.sagemath.org/">SAGE</a>.
+It is intended as a terminal and as such its primary purpose is to be a tool
+supporting readability of interpreter's console output.</p>
+</div>
+<div class="section" id="components-used-required">
+<h1>Components used (required)</h1>
+<table class="docutils" border="1">
+<colgroup>
+<col width="26%">
+<col width="35%">
+<col width="39%">
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Name</th>
+<th class="head">Wikipedia article</th>
+<th class="head">Homepage</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>MathJax</td>
+<td><a class="reference external" href="https://en.wikipedia.org/wiki/MathJax">mathjaxWP</a></td>
+<td><a class="reference external" href="https://www.mathjax.org/">mathjaxHome</a></td>
+</tr>
+<tr><td>jQuery</td>
+<td><a class="reference external" href="https://en.wikipedia.org/wiki/JQuery">jqueryWP</a></td>
+<td><a class="reference external" href="https://jquery.com/">jqueryHome</a></td>
+</tr>
+<tr><td>jq-console</td>
+<td>&nbsp;</td>
+<td><a class="reference external" href="https://github.com/replit-archive/jq-console">jqconsoleGitHub</a></td>
+</tr>
+<tr><td>node.js</td>
+<td><a class="reference external" href="https://en.wikipedia.org/wiki/Node.js">nodejsWP</a></td>
+<td><a class="reference external" href="https://nodejs.org/en/">nodejsHome</a></td>
+</tr>
+<tr><td>Socket.IO</td>
+<td><a class="reference external" href="https://en.wikipedia.org/wiki/Socket.IO">socketioWP</a></td>
+<td><a class="reference external" href="https://socket.io/">socketioHome</a></td>
+</tr>
+<tr><td>npm</td>
+<td><a class="reference external" href="https://en.wikipedia.org/wiki/Npm_(software)">npmWP</a></td>
+<td><a class="reference external" href="https://www.npmjs.com/">npmHome</a></td>
+</tr>
+<tr><td>NW.js</td>
+<td>optional</td>
+<td><a class="reference external" href="https://nwjs.io/">nwjsHome</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="a-mathjax-test-client">
+<h1>A MathJax Test Client</h1>
+<p>There is a single <tt class="docutils literal">HTML</tt> file test client (<tt class="docutils literal">jsmt_devel.html</tt>) in order
+to test the MathJax capabilities and the styling (<tt class="docutils literal">CSS</tt>) of the console.
+There is no functionality other than echoing the input as text and/or
+adding a <tt class="docutils literal">div</tt> element which will be rendered</p>
+<pre class="code html literal-block">...
+jqconsole.Write(input + '\n', 'jqconsole-output');
+jqconsole.Append($('<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">' + divID + '</span><span class="p">&gt;</span>' + input + '<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>'));
+MathJax.Hub.Queue(["Typeset",MathJax.Hub,divID]);
+--&gt; divID+++
+</pre>
+<p>All javascript code (except MathJax) is included as readable source in the
+html file. The output is just like the picture at the beginning.</p>
+</div>
+<div class="section" id="child-process">
+<h1>Child Process</h1>
+<p>The following code shows the principle of communication to a <tt class="docutils literal">REPL</tt>
+(<tt class="docutils literal">pure</tt> as an example)</p>
+<pre class="code javascript literal-block"><span class="kr">const</span> <span class="p">{</span> <span class="nx">spawn</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'child_process'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">child</span> <span class="o">=</span> <span class="nx">spawn</span><span class="p">(</span><span class="s1">'pure'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'-i'</span><span class="p">]);</span>
+
+<span class="kd">var</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">stdin</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">child</span><span class="p">.</span><span class="nx">stdin</span><span class="p">);</span>
+
+
+<span class="nx">input</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'end'</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Goodbye\n'</span><span class="p">);</span> <span class="nx">process</span><span class="p">.</span><span class="nx">exit</span><span class="p">()</span> <span class="p">});</span>
+
+<span class="nx">input</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">'let x=123;let x=x+1;'</span><span class="p">);</span>
+
+<span class="nx">child</span><span class="p">.</span><span class="nx">stdout</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'data'</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`child stdout:</span><span class="err">\</span><span class="sb">n</span><span class="si">${</span><span class="nx">data</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="o">==</span><span class="s1">'exit\n'</span><span class="p">)</span> <span class="p">{</span><span class="nx">input</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">'quit'</span><span class="p">);</span>
+                   <span class="nx">input</span><span class="p">.</span><span class="nx">end</span><span class="p">();};</span>
+<span class="p">});</span>
+</pre>
+<p>Including the code snippet above into a file called <tt class="docutils literal">test.js</tt>, we can test
+as follows:</p>
+<pre class="literal-block">C:\Users\kfp\Desktop\work\nodeJS&gt;node test.js
+child stdout:
+
+ __ \  |   |  __| _ \    Pure 0.68 (i686-w64-mingw32)
+ |   | |   | |    __/    Copyright (c) 2008-2018 by Albert Graef
+ .__/ \__,_|_|  \___|    (Type 'help' for help, 'help copying'
+_|                       for license information.)
+
+Loaded prelude from C:/msys64/mingw32/lib/pure/prelude.pure.
+
+
+child stdout:
+&gt;
+x+2;
+child stdout:
+126
+&gt;
+quit
+Goodbye
+
+
+C:\Users\kfp\Desktop\work\nodeJS&gt;
+</pre>
+</div>
+<div class="section" id="a-minimal-server">
+<h1>A minimal Server</h1>
+<p>The principle of a (<tt class="docutils literal">node</tt>) server looks as follows (<tt class="docutils literal">pure_server.js</tt>)</p>
+<pre class="code javascript literal-block"><span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="mi">3010</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">clientHTML</span> <span class="o">=</span> <span class="s1">'/pure_client.html'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'http'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'express'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+
+<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">);</span>
+
+<span class="c1">// Passing the http.Server instance to the listen method
+</span><span class="kd">var</span> <span class="nx">io</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'socket.io'</span><span class="p">).</span><span class="nx">listen</span><span class="p">(</span><span class="nx">server</span><span class="p">);</span>
+
+<span class="c1">// The server starts listening
+</span><span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="p">(</span><span class="s2">"Welcome to xyz"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Pure Server listening on port "</span> <span class="o">+</span> <span class="nx">port</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+
+<span class="c1">// Registering the route of your app that returns the HTML start file
+</span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"App root"</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">sendFile</span><span class="p">(</span><span class="nx">__dirname</span> <span class="o">+</span> <span class="nx">clientHTML</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Expose the node_modules folder as static resources
+// (to access socket.io.js in the browser)
+// maybe path.join(__dirname, 'directory')
+</span><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">'/static'</span><span class="p">,</span> <span class="nx">express</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s1">'node_modules'</span><span class="p">));</span>
+
+
+<span class="c1">// Handling the connection
+</span><span class="nx">io</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'connection'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">socket</span><span class="p">.</span><span class="nx">handshake</span><span class="p">);</span>  <span class="c1">// a lot of data without .handshake
+</span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Client X connected @"</span><span class="p">);</span>
+
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'pure_eval'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Pure input '</span><span class="o">+</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="o">+</span><span class="s1">': '</span><span class="o">+</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+        <span class="c1">// EVAL HERE
+</span>        <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">'pure_output'</span><span class="p">,{</span><span class="nx">id</span><span class="o">:</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">data</span><span class="o">:</span><span class="s1">'answer:'</span><span class="o">+</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">});</span>
+    <span class="p">});</span>
+
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'disconnect'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Client disconnect ...'</span><span class="p">);});</span>
+<span class="p">});</span>
+</pre>
+<p>It's very simple, indeed, but there is no <em>real</em> evaluation yet (the
+<tt class="docutils literal">child process</tt> will come in where <tt class="docutils literal">//EVAL HERE</tt> is a placeholder.
+Of coure it is rather generic because the details might be dependent on the
+<tt class="docutils literal">REPL</tt> language.</p>
+</div>
+<div class="section" id="a-minimal-client">
+<h1>A minimal Client</h1>
+<p>The client (<tt class="docutils literal">pure_client.html</tt>) is essentially the same as
+<tt class="docutils literal">jsmt_devel.html</tt>, but without javascript sources, i.e. more
+precisely, the <tt class="docutils literal">.js</tt> files will be served by the <tt class="docutils literal">node.js</tt>
+server itself (actually from <tt class="docutils literal">node_modules</tt>).</p>
+<pre class="code html literal-block"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"content-type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- @STYLE SECTION --&gt;</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+ <span class="o">..</span>
+ <span class="nt">--</span><span class="o">&gt;</span> <span class="nt">omitted</span>
+ <span class="o">..</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- SCRIPT CONFIG VARS --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="nx">jxmt_start_msg</span><span class="o">=</span><span class="s2">"This is jaxmate-devel V 0.2 (node pure_Server/MathJax)\n\n\n"</span><span class="p">;</span>
+<span class="nx">jxmt_prompt</span><span class="o">=</span><span class="s2">"&gt; "</span><span class="p">;</span>
+<span class="nx">jxmt_cfg_prefix</span><span class="o">=</span><span class="s2">"@"</span><span class="p">;</span>
+<span class="nx">jxmt_div_prefix</span><span class="o">=</span><span class="s1">'MathDiv'</span><span class="p">;</span>
+<span class="nx">jxmt_text_output</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+<span class="nx">jxmt_mathjax_output</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- @SCRIPT MATHJAX CONFIG --&gt;</span>
+<span class="c">&lt;!-- http://docs.mathjax.org/en/latest/configuration.html --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/x-mathjax-config"</span><span class="p">&gt;</span>
+  <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span><span class="nx">tex2jax</span><span class="o">:</span><span class="p">{</span><span class="nx">inlineMath</span><span class="o">:</span><span class="p">[[</span><span class="s1">'$'</span><span class="p">,</span><span class="s1">'$'</span><span class="p">]]},</span>
+    <span class="nx">CommonHTML</span><span class="o">:</span> <span class="p">{</span> <span class="nx">linebreaks</span><span class="o">:</span> <span class="p">{</span> <span class="nx">automatic</span><span class="o">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="nx">scale</span><span class="o">:</span> <span class="mi">130</span> <span class="p">},</span>
+    <span class="s2">"HTML-CSS"</span><span class="o">:</span> <span class="p">{</span> <span class="nx">linebreaks</span><span class="o">:</span> <span class="p">{</span> <span class="nx">automatic</span><span class="o">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="nx">fonts</span><span class="o">:</span> <span class="p">[</span><span class="s2">"TeX"</span><span class="p">],</span> <span class="nx">scale</span><span class="o">:</span> <span class="mi">130</span><span class="p">},</span>
+    <span class="nx">SVG</span><span class="o">:</span> <span class="p">{</span> <span class="nx">linebreaks</span><span class="o">:</span> <span class="p">{</span> <span class="nx">automatic</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}</span> <span class="p">}});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- @SCRIPT MATHJAX CDN
+&lt;script
+  src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/
+       latest.js?config=TeX-AMS-MML_HTMLorMML' async&gt;
+&lt;/script&gt;
+--&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Pure Client<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- @DIV CONSOLE --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"console"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/static/socket.io-client/dist/socket.io.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/static/jquery/dist/jquery.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/static/jq-console/lib/jqconsole.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/static/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span> <span class="na">async</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">(</span><span class="s1">'http://localhost:3010'</span><span class="p">);</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'connect'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">'do something'</span><span class="p">,{})});</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'myevent'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){});</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'disconnect'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+
+<span class="c">&lt;!-- @SCRIPT START --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">jqconsole</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#console'</span><span class="p">).</span><span class="nx">jqconsole</span><span class="p">(</span><span class="nx">jxmt_start_msg</span><span class="p">,</span> <span class="nx">jxmt_prompt</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">idc</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="c1">// div id counter
+</span>    <span class="kd">var</span> <span class="nx">out</span><span class="o">=</span><span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="s2">""</span><span class="p">,</span><span class="nx">data</span><span class="o">:</span><span class="s2">""</span><span class="p">};</span> <span class="c1">// data format
+</span>
+    <span class="kd">function</span> <span class="nx">jxmt_cfg_handler</span> <span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">jqconsole</span><span class="p">.</span><span class="nx">SetPromptLabel</span><span class="p">(</span><span class="s1">'cfg&gt; '</span><span class="p">)</span>
+      <span class="nx">jqconsole</span><span class="p">.</span><span class="nx">Write</span><span class="p">(</span><span class="s2">"cfg\n"</span><span class="p">,</span> <span class="s1">'jqconsole-output'</span><span class="p">);</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nx">s</span><span class="o">==</span><span class="s2">"@text off"</span><span class="p">)</span> <span class="p">{</span><span class="nx">jxmt_text_output</span><span class="o">=</span><span class="kc">false</span><span class="p">;};</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">s</span><span class="o">==</span><span class="s2">"@text on"</span><span class="p">)</span> <span class="p">{</span><span class="nx">jxmt_text_output</span><span class="o">=</span><span class="kc">true</span><span class="p">;};</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">s</span><span class="o">==</span><span class="s2">"@quit"</span><span class="p">)</span> <span class="p">{</span><span class="nx">jqconsole</span><span class="p">.</span><span class="nx">SetPromptLabel</span><span class="p">(</span><span class="nx">jxmt_prompt</span><span class="p">);};</span>
+    <span class="p">};</span>
+
+    <span class="c1">// Output coming from server (after emission of 'pure_eval')
+</span>    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'pure_output'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span> <span class="nx">out</span><span class="o">=</span><span class="nx">data</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">jxmt_text_output</span><span class="p">)</span>
+      <span class="p">{</span>
+            <span class="nx">jqconsole</span><span class="p">.</span><span class="nx">Write</span><span class="p">(</span><span class="nx">out</span><span class="p">.</span><span class="nx">data</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">,</span> <span class="s1">'jqconsole-output'</span><span class="p">);</span>
+      <span class="p">};</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">jxmt_mathjax_output</span><span class="p">)</span>
+      <span class="p">{</span>
+            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">out</span><span class="p">.</span><span class="nx">id</span><span class="p">).</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">out</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+            <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Queue</span><span class="p">([</span><span class="s2">"Typeset"</span><span class="p">,</span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">,</span><span class="nx">out</span><span class="p">.</span><span class="nx">id</span><span class="p">]);</span>
+      <span class="p">};</span>
+            <span class="c1">//https://www.w3schools.com/jsref/met_element_scrollintoview.asp
+</span>            <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">out</span><span class="p">.</span><span class="nx">id</span><span class="p">).</span><span class="nx">scrollIntoView</span><span class="p">();</span>  <span class="c1">//cool
+</span>    <span class="p">});</span>
+
+    <span class="kd">var</span> <span class="nx">startPrompt</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="c1">// Start the prompt with history enabled.
+</span>      <span class="nx">jqconsole</span><span class="p">.</span><span class="nx">Prompt</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Output srvdata with the class jqconsole-output.
+</span>        <span class="c1">// div counter
+</span>        <span class="kd">var</span> <span class="nx">divID</span><span class="o">=</span><span class="nx">jxmt_div_prefix</span> <span class="o">+</span> <span class="nx">idc</span><span class="p">;</span>
+        <span class="c1">// cfg_handler
+</span>        <span class="k">if</span> <span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="nx">jxmt_cfg_prefix</span><span class="p">))</span>
+          <span class="p">{</span><span class="nx">jxmt_cfg_handler</span><span class="p">(</span><span class="nx">input</span><span class="p">);</span><span class="nx">startPrompt</span><span class="p">();}</span>
+        <span class="k">else</span>
+         <span class="p">{</span>
+           <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">'pure_eval'</span><span class="p">,{</span><span class="nx">id</span><span class="o">:</span><span class="nx">divID</span><span class="p">,</span><span class="nx">data</span><span class="o">:</span><span class="nx">input</span><span class="p">});</span> <span class="c1">// socket emit -&gt; send input
+</span>           <span class="c1">//jqconsole.Write(out.data + '\n', 'jqconsole-output');
+</span>           <span class="nx">jqconsole</span><span class="p">.</span><span class="nx">Append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;div id='</span> <span class="o">+</span> <span class="nx">divID</span> <span class="o">+</span> <span class="s1">'&gt;&lt;/div&gt;'</span><span class="p">));</span>
+           <span class="c1">//MathJax.Hub.Queue(["Typeset",MathJax.Hub,divID]);
+</span>           <span class="nx">idc</span><span class="o">++</span><span class="p">;</span>
+           <span class="c1">// Restart the prompt.
+</span>           <span class="nx">startPrompt</span><span class="p">();};</span>
+      <span class="p">});</span>
+    <span class="p">};</span>
+    <span class="nx">startPrompt</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre>
+</div>
+<div class="section" id="combining-child-process-and-server">
+<h1>Combining Child Process and Server</h1>
+<p>Now we may include the child process to the server code, getting a
+working prototype</p>
+<pre class="code javascript literal-block"><span class="c1">// Spawning App
+</span><span class="kr">const</span> <span class="p">{</span> <span class="nx">spawn</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'child_process'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">child</span> <span class="o">=</span> <span class="nx">spawn</span><span class="p">(</span><span class="s1">'pure'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'-i'</span><span class="p">]);</span>
+
+<span class="kd">var</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">stdin</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">child</span><span class="p">.</span><span class="nx">stdin</span><span class="p">);</span>
+
+
+<span class="nx">input</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'end'</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Goodbye\n'</span><span class="p">);</span> <span class="nx">process</span><span class="p">.</span><span class="nx">exit</span><span class="p">()</span> <span class="p">});</span>
+
+<span class="nx">input</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">'let x=123;let x=x+1;'</span><span class="p">);</span>
+
+<span class="c1">// Server
+</span><span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="mi">3010</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">clientHTML</span> <span class="o">=</span> <span class="s1">'/pure_client.html'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'http'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'express'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+
+<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">);</span>
+
+<span class="c1">// Passing the http.Server instance to the listen method
+</span><span class="kd">var</span> <span class="nx">io</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'socket.io'</span><span class="p">).</span><span class="nx">listen</span><span class="p">(</span><span class="nx">server</span><span class="p">);</span>
+
+<span class="c1">// Child on data event
+</span><span class="nx">child</span><span class="p">.</span><span class="nx">stdout</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'data'</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`child stdout:</span><span class="err">\</span><span class="sb">n</span><span class="si">${</span><span class="nx">data</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+  <span class="nx">io</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">'pure_output'</span><span class="p">,{</span><span class="nx">id</span><span class="o">:</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">data</span><span class="o">:</span><span class="s1">'child:'</span><span class="o">+</span><span class="nx">data</span><span class="p">});</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="o">==</span><span class="s1">'exit\n'</span><span class="p">)</span> <span class="p">{</span><span class="nx">input</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">'quit'</span><span class="p">);</span>
+                   <span class="nx">input</span><span class="p">.</span><span class="nx">end</span><span class="p">();};</span>
+<span class="p">});</span>
+
+
+<span class="c1">// The server starts listening
+</span><span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="p">(</span><span class="s2">"Welcome to xyz"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Pure Server listening on port "</span><span class="o">+</span> <span class="nx">port</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+
+<span class="c1">// Registering the route of your app that returns the HTML start file
+</span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"App root"</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">sendFile</span><span class="p">(</span><span class="nx">__dirname</span> <span class="o">+</span> <span class="nx">clientHTML</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Expose the node_modules folder as static resources
+// (to access socket.io.js in the browser)
+// maybe path.join(__dirname, 'directory')
+</span><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">'/static'</span><span class="p">,</span> <span class="nx">express</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s1">'node_modules'</span><span class="p">));</span>
+
+
+<span class="c1">// Handling the connection
+</span><span class="nx">io</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'connection'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//console.log(socket.handshake);  // a lot of data without .handshake
+</span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Client X connected @"</span><span class="p">);</span>
+
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'pure_eval'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Pure input '</span><span class="o">+</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="o">+</span><span class="s1">': '</span><span class="o">+</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+        <span class="nx">input</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="o">+</span><span class="s1">'\n'</span><span class="p">);</span>
+        <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">'pure_output'</span><span class="p">,{</span><span class="nx">id</span><span class="o">:</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">data</span><span class="o">:</span><span class="s1">'answer:'</span><span class="o">+</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">});</span>
+    <span class="p">});</span>
+
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'disconnect'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Client disconnect ...'</span><span class="p">);});</span>
+<span class="p">});</span>
+</pre>
+</div>
+<div class="section" id="let-s-go">
+<h1>Let's go</h1>
+<ol class="arabic">
+<li><p class="first">Start the server:</p>
+<pre class="literal-block">node pure_server.js
+</pre>
+</li>
+</ol>
+<img alt="pure_server1.png" src="jaxMaTe-Dateien/pure_server1.png">
+<ol class="arabic" start="2">
+<li><p class="first">Start the client:</p>
+<pre class="literal-block">(firefox) localhost:3010
+</pre>
+</li>
+</ol>
+<img alt="pure_client1.png" src="jaxMaTe-Dateien/pure_client1.png">
+<ol class="arabic simple" start="3">
+<li>Pure interactive ...</li>
+</ol>
+<img alt="pure_server2.png" src="jaxMaTe-Dateien/pure_server2.png">
+<img alt="pure_client2.png" src="jaxMaTe-Dateien/pure_client2.png">
+</div>
+</div>
+
+<script type="text/javascript">
+var mtime = '1544826943.04';
+var poll = null;
+window.onload = function () {
+    setTimeout(function () {
+        poll = new XMLHttpRequest();
+        poll.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var reload = new XMLHttpRequest();
+                reload.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.title = this.responseXML.title;
+                        document.body.innerHTML = this.responseXML.body.innerHTML;
+                        var old_styles = document.getElementsByTagName('style');
+                        var new_styles = this.responseXML.getElementsByTagName('style');
+                        for (var i = old_styles.length - 1; i >= 0; i--) {
+                            old_styles[i].remove();
+                        }
+                        // convert HTMLCollection to an array so that
+                        // items don't disappear from under us when I append
+                        // them to a different DOM tree
+                        new_styles = [].slice.call(new_styles);
+                        for (var i = 0; i < new_styles.length; i++) {
+                            document.head.appendChild(new_styles[i]);
+                        }
+                        mtime = this.getResponseHeader('X-Restview-Mtime');
+                        if (mtime) {
+                            poll.open('HEAD', '/polling?pathname=' + location.pathname + '&mtime=' + mtime, true);
+                            poll.send();
+                        }
+                    }
+                }
+                reload.open('GET', location.pathname, true);
+                reload.responseType = 'document';
+                reload.send();
+            }
+        }
+        poll.open('HEAD', '/polling?pathname=' + location.pathname + '&mtime=' + mtime, true);
+        poll.send(null);
+    }, 0);
+}
+window.onbeforeunload = function () {
+    poll.abort();
+}
+</script>
+
+
+</body><swift-selection-search-popup style="place-content: initial; place-items: initial; place-self: initial; animation: initial; -moz-appearance: initial; backface-visibility: initial; background-attachment: initial; background-blend-mode: initial; background-clip: initial; background-color: rgb(255, 255, 255) !important; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; -moz-binding: initial; block-size: initial; border-block-end: initial; border-block-start: initial; border: initial; border-radius: 2px !important; border-collapse: initial; border-inline-end: initial; border-inline-start: initial; border-spacing: initial; bottom: initial; -moz-box-align: initial; box-decoration-break: initial; -moz-box-direction: initial; -moz-box-flex: initial; -moz-box-ordinal-group: initial; -moz-box-orient: initial; -moz-box-pack: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color: initial; color-adjust: initial; color-interpolation: initial; color-interpolation-filters: initial; columns: initial; column-fill: initial; column-gap: initial; column-rule: initial; content: initial; -moz-context-properties: initial; -moz-control-character-visibility: initial; counter-increment: initial; counter-reset: initial; cursor: initial; display: none !important; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; -moz-float-edge: initial; flood-color: initial; flood-opacity: initial; font: initial; font-family: initial; font-feature-settings: initial; font-kerning: initial; font-language-override: initial; font-size-adjust: initial; font-stretch: initial; font-style: initial; font-synthesis: initial; font-variant: initial; font-weight: initial; -moz-force-broken-image-icon: initial; grid: initial; grid-area: initial; height: 32px !important; hyphens: initial; image-orientation: initial; -moz-image-region: initial; image-rendering: initial; ime-mode: initial; inline-size: initial; isolation: initial; left: 41.8px !important; letter-spacing: initial; lighting-color: initial; line-height: initial; list-style: initial; margin-block-end: initial; margin-block-start: initial; margin: initial; margin-inline-end: initial; margin-inline-start: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset-block-end: initial; offset-block-start: initial; offset-inline-end: initial; offset-inline-start: initial; opacity: initial; order: initial; -moz-orient: initial; outline: initial; outline-offset: initial; -moz-outline-radius: initial; padding-block-end: initial; padding-block-start: initial; padding: 1px 3px !important; padding-inline-end: initial; padding-inline-start: initial; page-break-after: initial; page-break-before: initial; page-break-inside: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; quotes: initial; resize: initial; right: initial; ruby-align: initial; ruby-position: initial; scroll-behavior: initial; scroll-snap-coordinate: initial; scroll-snap-destination: initial; scroll-snap-points-x: initial; scroll-snap-points-y: initial; scroll-snap-type: initial; shape-rendering: initial; -moz-stack-sizing: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; -moz-tab-size: initial; table-layout: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-emphasis: initial; text-emphasis-position: initial; -webkit-text-fill-color: initial; text-indent: initial; text-justify: initial; text-orientation: initial; text-overflow: initial; text-rendering: initial; text-shadow: initial; -moz-text-size-adjust: initial; -webkit-text-stroke: initial; text-transform: initial; top: 1907px !important; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; -moz-user-focus: initial; -moz-user-input: initial; -moz-user-modify: initial; vector-effect: initial; vertical-align: initial; visibility: initial; white-space: initial; width: 214.4px !important; will-change: initial; -moz-window-dragging: initial; -moz-window-opacity: initial; -moz-window-transform: initial; -moz-window-transform-origin: initial; word-break: initial; word-spacing: initial; overflow-wrap: initial; writing-mode: initial; box-sizing: initial !important; font-size: 0px !important; position: absolute !important; z-index: 2147483647 !important; text-align: center !important; overflow: hidden !important; -moz-user-select: none !important; box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5) !important; direction: ltr !important;"><img src="jaxMaTe-Dateien/copy.png" style="place-content: initial; place-items: initial; place-self: initial; animation: initial; -moz-appearance: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; -moz-binding: initial; block-size: initial; border-block-end: initial; border-block-start: initial; border: initial; border-radius: 0px !important; border-collapse: initial; border-inline-end: initial; border-inline-start: initial; border-spacing: initial; bottom: initial; -moz-box-align: initial; box-decoration-break: initial; -moz-box-direction: initial; -moz-box-flex: initial; -moz-box-ordinal-group: initial; -moz-box-orient: initial; -moz-box-pack: initial; box-shadow: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color: initial; color-adjust: initial; color-interpolation: initial; color-interpolation-filters: initial; columns: initial; column-fill: initial; column-gap: initial; column-rule: initial; content: initial; -moz-context-properties: initial; -moz-control-character-visibility: initial; counter-increment: initial; counter-reset: initial; cursor: pointer !important; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; -moz-float-edge: initial; flood-color: initial; flood-opacity: initial; font: initial; font-synthesis: initial; -moz-force-broken-image-icon: initial; grid: initial; grid-area: initial; height: 24px !important; hyphens: initial; image-orientation: initial; -moz-image-region: initial; image-rendering: initial; ime-mode: initial; inline-size: initial; isolation: initial; left: 3px !important; letter-spacing: initial; lighting-color: initial; list-style: initial; margin-block-end: initial; margin-block-start: initial; margin: initial; margin-inline-end: initial; margin-inline-start: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset-block-end: initial; offset-block-start: initial; offset-inline-end: initial; offset-inline-start: initial; opacity: initial; order: initial; -moz-orient: initial; outline: initial; outline-offset: initial; -moz-outline-radius: initial; overflow: initial; padding-block-end: initial; padding-block-start: initial; padding: 4px 2px !important; padding-inline-end: initial; padding-inline-start: initial; page-break-after: initial; page-break-before: initial; page-break-inside: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: auto !important; quotes: initial; resize: initial; right: initial; ruby-align: initial; ruby-position: initial; scroll-behavior: initial; scroll-snap-coordinate: initial; scroll-snap-destination: initial; scroll-snap-points-x: initial; scroll-snap-points-y: initial; scroll-snap-type: initial; shape-rendering: initial; -moz-stack-sizing: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; -moz-tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-emphasis: initial; text-emphasis-position: initial; -webkit-text-fill-color: initial; text-indent: initial; text-justify: initial; text-orientation: initial; text-overflow: initial; text-rendering: initial; text-shadow: initial; -moz-text-size-adjust: initial; -webkit-text-stroke: initial; text-transform: initial; top: 1px !important; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; -moz-user-focus: initial; -moz-user-input: initial; -moz-user-modify: initial; -moz-user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; white-space: initial; width: 24px !important; will-change: initial; -moz-window-dragging: initial; -moz-window-opacity: initial; -moz-window-transform: initial; -moz-window-transform-origin: initial; word-break: initial; word-spacing: initial; overflow-wrap: initial; writing-mode: initial; z-index: initial; display: initial !important; position: absolute !important; box-sizing: initial !important;" title="Copy to clipboard"><img src="jaxMaTe-Dateien/open-link.png" style="place-content: initial; place-items: initial; place-self: initial; animation: initial; -moz-appearance: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; -moz-binding: initial; block-size: initial; border-block-end: initial; border-block-start: initial; border: initial; border-radius: 0px !important; border-collapse: initial; border-inline-end: initial; border-inline-start: initial; border-spacing: initial; bottom: initial; -moz-box-align: initial; box-decoration-break: initial; -moz-box-direction: initial; -moz-box-flex: initial; -moz-box-ordinal-group: initial; -moz-box-orient: initial; -moz-box-pack: initial; box-shadow: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color: initial; color-adjust: initial; color-interpolation: initial; color-interpolation-filters: initial; columns: initial; column-fill: initial; column-gap: initial; column-rule: initial; content: initial; -moz-context-properties: initial; -moz-control-character-visibility: initial; counter-increment: initial; counter-reset: initial; cursor: pointer !important; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; -moz-float-edge: initial; flood-color: initial; flood-opacity: initial; font: initial; font-synthesis: initial; -moz-force-broken-image-icon: initial; grid: initial; grid-area: initial; height: 24px !important; hyphens: initial; image-orientation: initial; -moz-image-region: initial; image-rendering: initial; ime-mode: initial; inline-size: initial; isolation: initial; left: 31px !important; letter-spacing: initial; lighting-color: initial; list-style: initial; margin-block-end: initial; margin-block-start: initial; margin: initial; margin-inline-end: initial; margin-inline-start: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset-block-end: initial; offset-block-start: initial; offset-inline-end: initial; offset-inline-start: initial; opacity: initial; order: initial; -moz-orient: initial; outline: initial; outline-offset: initial; -moz-outline-radius: initial; overflow: initial; padding-block-end: initial; padding-block-start: initial; padding: 4px 2px !important; padding-inline-end: initial; padding-inline-start: initial; page-break-after: initial; page-break-before: initial; page-break-inside: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: auto !important; quotes: initial; resize: initial; right: initial; ruby-align: initial; ruby-position: initial; scroll-behavior: initial; scroll-snap-coordinate: initial; scroll-snap-destination: initial; scroll-snap-points-x: initial; scroll-snap-points-y: initial; scroll-snap-type: initial; shape-rendering: initial; -moz-stack-sizing: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; -moz-tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-emphasis: initial; text-emphasis-position: initial; -webkit-text-fill-color: initial; text-indent: initial; text-justify: initial; text-orientation: initial; text-overflow: initial; text-rendering: initial; text-shadow: initial; -moz-text-size-adjust: initial; -webkit-text-stroke: initial; text-transform: initial; top: 1px !important; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; -moz-user-focus: initial; -moz-user-input: initial; -moz-user-modify: initial; -moz-user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; white-space: initial; width: 24px !important; will-change: initial; -moz-window-dragging: initial; -moz-window-opacity: initial; -moz-window-transform: initial; -moz-window-transform-origin: initial; word-break: initial; word-spacing: initial; overflow-wrap: initial; writing-mode: initial; z-index: initial; display: initial !important; position: absolute !important; box-sizing: initial !important;" title="Open as link"><img src="jaxMaTe-Dateien/separator.png" style="place-content: initial; place-items: initial; place-self: initial; animation: initial; -moz-appearance: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; -moz-binding: initial; block-size: initial; border-block-end: initial; border-block-start: initial; border: initial; border-radius: 0px !important; border-collapse: initial; border-inline-end: initial; border-inline-start: initial; border-spacing: initial; bottom: initial; -moz-box-align: initial; box-decoration-break: initial; -moz-box-direction: initial; -moz-box-flex: initial; -moz-box-ordinal-group: initial; -moz-box-orient: initial; -moz-box-pack: initial; box-shadow: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color: initial; color-adjust: initial; color-interpolation: initial; color-interpolation-filters: initial; columns: initial; column-fill: initial; column-gap: initial; column-rule: initial; content: initial; -moz-context-properties: initial; -moz-control-character-visibility: initial; counter-increment: initial; counter-reset: initial; cursor: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; -moz-float-edge: initial; flood-color: initial; flood-opacity: initial; font: initial; font-synthesis: initial; -moz-force-broken-image-icon: initial; grid: initial; grid-area: initial; height: 24px !important; hyphens: initial; image-orientation: initial; -moz-image-region: initial; image-rendering: initial; ime-mode: initial; inline-size: initial; isolation: initial; left: 54.2px !important; letter-spacing: initial; lighting-color: initial; list-style: initial; margin-block-end: initial; margin-block-start: initial; margin: initial; margin-inline-end: initial; margin-inline-start: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset-block-end: initial; offset-block-start: initial; offset-inline-end: initial; offset-inline-start: initial; opacity: initial; order: initial; -moz-orient: initial; outline: initial; outline-offset: initial; -moz-outline-radius: initial; overflow: initial; padding-block-end: initial; padding-block-start: initial; padding: 4px 2px !important; padding-inline-end: initial; padding-inline-start: initial; page-break-after: initial; page-break-before: initial; page-break-inside: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: none !important; quotes: initial; resize: initial; right: initial; ruby-align: initial; ruby-position: initial; scroll-behavior: initial; scroll-snap-coordinate: initial; scroll-snap-destination: initial; scroll-snap-points-x: initial; scroll-snap-points-y: initial; scroll-snap-type: initial; shape-rendering: initial; -moz-stack-sizing: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; -moz-tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-emphasis: initial; text-emphasis-position: initial; -webkit-text-fill-color: initial; text-indent: initial; text-justify: initial; text-orientation: initial; text-overflow: initial; text-rendering: initial; text-shadow: initial; -moz-text-size-adjust: initial; -webkit-text-stroke: initial; text-transform: initial; top: 1px !important; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; -moz-user-focus: initial; -moz-user-input: initial; -moz-user-modify: initial; -moz-user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; white-space: initial; width: 24px !important; will-change: initial; -moz-window-dragging: initial; -moz-window-opacity: initial; -moz-window-transform: initial; -moz-window-transform-origin: initial; word-break: initial; word-spacing: initial; overflow-wrap: initial; writing-mode: initial; z-index: initial; display: initial !important; position: absolute !important; box-sizing: initial !important;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEgElEQVRogdWa32saWRTHfcsfVAIiiAihEIoQChIKEihSCIEQAqUQSl4KQ5F1hRACRQilEAoiggT6UAhCkUKQ9cds7DTGuJWxJjETJjE6zWzM+N0HUeLeG3PnakZ64LxkPGe+H+d47zk3YwMwAUAAUMXvY1V0NE/YALwds5hh7K0NgDJuFUOYYhvHXQ1dx0UyCSUWgxKLoZHN4qbR4MplKYCh66isrSHjcOCvR4/6PON0ohIKmQaxDMDQdXyfmyOE/9+/z83B0HXmvJYBVEKhe8V3vSwIzHktAWgbBnJud5/Iw+Vl1Hd3cZFMYs/j6S8nh4M590gBWqqKpihCicUgB4MoCwJ+rq/jZGurT6A4PY329TUA4KpUov4mWvW6dQCteh2VUAgZp5OpREorK71YJRYjruemptA2DGsAqu/eMQvvetblwvmXLwAAvVpF2m7vu67E48z3Hwrgx+qqKeG3PT052YO4TKdxsLiIw+Xl3t8eHKD28ePdS+Hz55ADAZxGoygLAvJeL/VzObcb12dnvBL4AW4aDWrZ7M3M4DKVosacbW8j63IRMT9WV60HoP3wMk4nrsrlgXGXqRRR72m7nXnFoRkXQGllhQA42txkipUDASLWbN3fNi6Afb+fENHM55liL1MpIvZka4tHBgBOgML8PCFCl2WmWK1Q4H56NOMCKAsCIeIimWSKVeJxIrYWifDIAMAJcJlOEyKKS0v3xrUNA9KzZ9zlRzPufYDWGh+Fw3d+vm0YKL95Qy69Hg+vBAAcAIamDWwf9v1+1Hd38e/xMYBOzSvxONFxdv00GrUOoKWq1BLg9cL8/FDiTQPQVh9e3/f7YWiadQC09XvP40ElFMLBwgKz8LTdjqPNzd48YBnAz/V1QowmSb3rLVXFaTSKg8VF5KamCNGFFy9wFA6jpaojEW4aQA4GCYD7SuBXsch9XMJqzACn0SgB8M/r10M1YqMwZoBWvU4M5l3Pe704WFhAWRCoXgmFcLa9jV/F4vgAAEDd2SHaYbOecTiw7/fj+P37kZSX6Y2skc1C8vlGspRmXS5U1tZMHWQNDWBoGqobG0hPTo5sT/g2O8s9WpoCuK7VsDczM1BMzu2G5PP1+bfZWSYInifBDGBo2p3iD1++xGk0eu9IqUkSjsJhYp/oenVj4+EATj58oNYw6xxw2wxNQ3FpiZrP7FNgBvj7yRPihurnz6bFd83QNIiPHxM5m6JoKg8TgKFp1OWQ9fjvLiu9ejX0l8IEcNNoWAZwnkiYysFcQrRDKSUWMy26a7osU4eiq1LJVB5mANq3lXE4uI5Emvk88k+fUlsSs8YMoBUKd25eks+HWiSCpihSy8rQdTRFEbVIZODsUP/69eEAAKAWiTDvrnmvF5LPx9w78R5umW4l1J0d6n9UeD3rcuHs0ycu8VwAQKelkAOBoTrTrMsFORgcz/F6124aDZwnEigLQqdcBjR44vQ0JJ8PciCA80RiJAN9F2DkrxpclUrQJAmaJD30SKn87i97/GFD53WbPwEcj1mMGTtGR/PEf2Yj8lvRWhM+AAAAAElFTkSuQmCC" style="place-content: initial; place-items: initial; place-self: initial; animation: initial; -moz-appearance: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; -moz-binding: initial; block-size: initial; border-block-end: initial; border-block-start: initial; border: initial; border-radius: 0px !important; border-collapse: initial; border-inline-end: initial; border-inline-start: initial; border-spacing: initial; bottom: initial; -moz-box-align: initial; box-decoration-break: initial; -moz-box-direction: initial; -moz-box-flex: initial; -moz-box-ordinal-group: initial; -moz-box-orient: initial; -moz-box-pack: initial; box-shadow: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color: initial; color-adjust: initial; color-interpolation: initial; color-interpolation-filters: initial; columns: initial; column-fill: initial; column-gap: initial; column-rule: initial; content: initial; -moz-context-properties: initial; -moz-control-character-visibility: initial; counter-increment: initial; counter-reset: initial; cursor: pointer !important; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; -moz-float-edge: initial; flood-color: initial; flood-opacity: initial; font: initial; font-synthesis: initial; -moz-force-broken-image-icon: initial; grid: initial; grid-area: initial; height: 24px !important; hyphens: initial; image-orientation: initial; -moz-image-region: initial; image-rendering: initial; ime-mode: initial; inline-size: initial; isolation: initial; left: 77.4px !important; letter-spacing: initial; lighting-color: initial; list-style: initial; margin-block-end: initial; margin-block-start: initial; margin: initial; margin-inline-end: initial; margin-inline-start: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset-block-end: initial; offset-block-start: initial; offset-inline-end: initial; offset-inline-start: initial; opacity: initial; order: initial; -moz-orient: initial; outline: initial; outline-offset: initial; -moz-outline-radius: initial; overflow: initial; padding-block-end: initial; padding-block-start: initial; padding: 4px 2px !important; padding-inline-end: initial; padding-inline-start: initial; page-break-after: initial; page-break-before: initial; page-break-inside: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: auto !important; quotes: initial; resize: initial; right: initial; ruby-align: initial; ruby-position: initial; scroll-behavior: initial; scroll-snap-coordinate: initial; scroll-snap-destination: initial; scroll-snap-points-x: initial; scroll-snap-points-y: initial; scroll-snap-type: initial; shape-rendering: initial; -moz-stack-sizing: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; -moz-tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-emphasis: initial; text-emphasis-position: initial; -webkit-text-fill-color: initial; text-indent: initial; text-justify: initial; text-orientation: initial; text-overflow: initial; text-rendering: initial; text-shadow: initial; -moz-text-size-adjust: initial; -webkit-text-stroke: initial; text-transform: initial; top: 1px !important; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; -moz-user-focus: initial; -moz-user-input: initial; -moz-user-modify: initial; -moz-user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; white-space: initial; width: 24px !important; will-change: initial; -moz-window-dragging: initial; -moz-window-opacity: initial; -moz-window-transform: initial; -moz-window-transform-origin: initial; word-break: initial; word-spacing: initial; overflow-wrap: initial; writing-mode: initial; z-index: initial; display: initial !important; position: absolute !important; box-sizing: initial !important;" title="De &lt;-&gt; En"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEHklEQVRYhb2WXWwUVRTH56XBotQn33wQBXlTov3gQWtErKB9IGkptPYBxYox6INRa0LQQELRYqEJ8NAPLMQ0bCuBVqzQZhGpH91YJGYJaYMW0O1XZnb6xc7u7Nxz9u+D203vzGx3tlZPcl723j2///m4d66ieDRd1/OIqIqIWolokJl1ZraSHiaiweRapa7reV7jZjTTNNcRURszx+DRmDlKRCdN01y7ZDCAlUKIBmYmr2AXIUIIcTgUCuVmm/XjzHxzqWAXIUHTNNd4gluW9RQza26BaHwURvsXmHn/bYS3bYZasgHqi0UIl5Vg+r23YJxuBo3+lU6ECmC9l8wdcJoYw+z+j6BuKoT6QsHivqkQs598CJoYcxWRthKTk5P3u5U91tcD7ZXizGCba6XPwbzS59oO15kQQjTYNxtnTmUNXuhz9ftd2yGEqLeXfp192mN9PWkDT9VUItJyDLFvziHWcx6RluOYerNKhh+pAxKJdPMgpFYQUZvU8/FRaC8/6wDr1VsRvxZwDQoA8cEBhHeU4t7xz9PuSTGIWhVFURQAD9ovmUjjOw749J7XkJibyxg4YUQy7gEAZjY0TVulEFGVFCA6AtG7ArO1j6Tg4W2bwTNTngJnY0S0XSGiVknZnToIfw6EPwfGsYegbclH7NKFZYcnBTQpRDQo/fhrSUqA8Ocgfm41IMR/JSCgMLO+8EfR/7AkgG5ULhpk48GIZ79yU06EmVWFmS1JwOUVkgD+Y9+yCWj/SUKBmeP/q4C2q3FXAWFJgL0FwR3LJqAz4KiA6hzC6y9JAkb7n4DF2Q/hbZUdAq4OyXGIKOByDD9NwS/0rMYzvq3oGvFnLcA3YDkETMzIV/P8MZTGPBG9g6g/F3VdTyPfV4Z8XxlKul5HODbtGX4vlkB5oyHBdzZFHfuIqELRdT2PmaXVowMHUvB5r+79ADPxzFexRUDtmZgj+w5n/w0AD8x/jE4uXByPqCg++6pDROnXu9E/di0t/Nb0Xezq9mHjwVkJXt5oIBp3lL954ed4LbM8aRfv9jsEzHv5t++i4XobOm9dxFe/X8KJYDve8O9Fga8c+b4yFJ2qxfOfhVICfhiW37XMbJmm+Zj9QXLYntGXw91pRWTygvadKD7yi+PsA4AQ4pDjRQRgJTPfsG/u/fNHFJ+tzlpAUUcFWoLdDjgz/wbgvnSP0jXJ16tkE4aGvT8fRWFHuSf47u8+xtDUiBt8EsCjrvAFlVjvJgL4ZzhPD53Hnu8PYEt3DTZ0VqCoowIlXbtQc3kfTgTbMTx12+2vYOZJy7KeXBRuq0TQNdISLFn2xTO3WygUyhVC1NtPR5ZgSwhxCOl67rUaRNSavDi8gg0ianYctX9jmqatIqLtRNRERAFmVpk5nnSViALJtQrM33Ae7G92y3s6IRzKLQAAAABJRU5ErkJggg==" style="place-content: initial; place-items: initial; place-self: initial; animation: initial; -moz-appearance: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; -moz-binding: initial; block-size: initial; border-block-end: initial; border-block-start: initial; border: initial; border-radius: 0px !important; border-collapse: initial; border-inline-end: initial; border-inline-start: initial; border-spacing: initial; bottom: initial; -moz-box-align: initial; box-decoration-break: initial; -moz-box-direction: initial; -moz-box-flex: initial; -moz-box-ordinal-group: initial; -moz-box-orient: initial; -moz-box-pack: initial; box-shadow: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color: initial; color-adjust: initial; color-interpolation: initial; color-interpolation-filters: initial; columns: initial; column-fill: initial; column-gap: initial; column-rule: initial; content: initial; -moz-context-properties: initial; -moz-control-character-visibility: initial; counter-increment: initial; counter-reset: initial; cursor: pointer !important; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; -moz-float-edge: initial; flood-color: initial; flood-opacity: initial; font: initial; font-synthesis: initial; -moz-force-broken-image-icon: initial; grid: initial; grid-area: initial; height: 24px !important; hyphens: initial; image-orientation: initial; -moz-image-region: initial; image-rendering: initial; ime-mode: initial; inline-size: initial; isolation: initial; left: 105.4px !important; letter-spacing: initial; lighting-color: initial; list-style: initial; margin-block-end: initial; margin-block-start: initial; margin: initial; margin-inline-end: initial; margin-inline-start: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset-block-end: initial; offset-block-start: initial; offset-inline-end: initial; offset-inline-start: initial; opacity: initial; order: initial; -moz-orient: initial; outline: initial; outline-offset: initial; -moz-outline-radius: initial; overflow: initial; padding-block-end: initial; padding-block-start: initial; padding: 4px 2px !important; padding-inline-end: initial; padding-inline-start: initial; page-break-after: initial; page-break-before: initial; page-break-inside: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: auto !important; quotes: initial; resize: initial; right: initial; ruby-align: initial; ruby-position: initial; scroll-behavior: initial; scroll-snap-coordinate: initial; scroll-snap-destination: initial; scroll-snap-points-x: initial; scroll-snap-points-y: initial; scroll-snap-type: initial; shape-rendering: initial; -moz-stack-sizing: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; -moz-tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-emphasis: initial; text-emphasis-position: initial; -webkit-text-fill-color: initial; text-indent: initial; text-justify: initial; text-orientation: initial; text-overflow: initial; text-rendering: initial; text-shadow: initial; -moz-text-size-adjust: initial; -webkit-text-stroke: initial; text-transform: initial; top: 1px !important; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; -moz-user-focus: initial; -moz-user-input: initial; -moz-user-modify: initial; -moz-user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; white-space: initial; width: 24px !important; will-change: initial; -moz-window-dragging: initial; -moz-window-opacity: initial; -moz-window-transform: initial; -moz-window-transform-origin: initial; word-break: initial; word-spacing: initial; overflow-wrap: initial; writing-mode: initial; z-index: initial; display: initial !important; position: absolute !important; box-sizing: initial !important;" title="Google"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAA0klEQVRoge2YwQ2EIBREfwmUYCmWYCmWsB1YgqVQEiXMXiDxgCskCEx2XjJHdR75UcFMCCGEqABmDmYrzD4x/hIU5npNus8KM9eyaGmZLqkpXrOSveOfyh8TlHzKQTM2VeMEs210sYpsOYEwQbHSBNrxSZHA6LwnAAAhkAsk9p1cIOEcuUCCXgAAzpNcILEsEtAIVQu0ekZ3AdrXKO2HjPpXolMkMDo5AfotJfemnmmMsuWjAPfBVpTwE5S8i/9ZfuZxKi5eKPfK8XrTkkIIIf6CLwP44M2GNwfzAAAAAElFTkSuQmCC" style="place-content: initial; place-items: initial; place-self: initial; animation: initial; -moz-appearance: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; -moz-binding: initial; block-size: initial; border-block-end: initial; border-block-start: initial; border: initial; border-radius: 0px !important; border-collapse: initial; border-inline-end: initial; border-inline-start: initial; border-spacing: initial; bottom: initial; -moz-box-align: initial; box-decoration-break: initial; -moz-box-direction: initial; -moz-box-flex: initial; -moz-box-ordinal-group: initial; -moz-box-orient: initial; -moz-box-pack: initial; box-shadow: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color: initial; color-adjust: initial; color-interpolation: initial; color-interpolation-filters: initial; columns: initial; column-fill: initial; column-gap: initial; column-rule: initial; content: initial; -moz-context-properties: initial; -moz-control-character-visibility: initial; counter-increment: initial; counter-reset: initial; cursor: pointer !important; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; -moz-float-edge: initial; flood-color: initial; flood-opacity: initial; font: initial; font-synthesis: initial; -moz-force-broken-image-icon: initial; grid: initial; grid-area: initial; height: 24px !important; hyphens: initial; image-orientation: initial; -moz-image-region: initial; image-rendering: initial; ime-mode: initial; inline-size: initial; isolation: initial; left: 133.4px !important; letter-spacing: initial; lighting-color: initial; list-style: initial; margin-block-end: initial; margin-block-start: initial; margin: initial; margin-inline-end: initial; margin-inline-start: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset-block-end: initial; offset-block-start: initial; offset-inline-end: initial; offset-inline-start: initial; opacity: initial; order: initial; -moz-orient: initial; outline: initial; outline-offset: initial; -moz-outline-radius: initial; overflow: initial; padding-block-end: initial; padding-block-start: initial; padding: 4px 2px !important; padding-inline-end: initial; padding-inline-start: initial; page-break-after: initial; page-break-before: initial; page-break-inside: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: auto !important; quotes: initial; resize: initial; right: initial; ruby-align: initial; ruby-position: initial; scroll-behavior: initial; scroll-snap-coordinate: initial; scroll-snap-destination: initial; scroll-snap-points-x: initial; scroll-snap-points-y: initial; scroll-snap-type: initial; shape-rendering: initial; -moz-stack-sizing: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; -moz-tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-emphasis: initial; text-emphasis-position: initial; -webkit-text-fill-color: initial; text-indent: initial; text-justify: initial; text-orientation: initial; text-overflow: initial; text-rendering: initial; text-shadow: initial; -moz-text-size-adjust: initial; -webkit-text-stroke: initial; text-transform: initial; top: 1px !important; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; -moz-user-focus: initial; -moz-user-input: initial; -moz-user-modify: initial; -moz-user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; white-space: initial; width: 24px !important; will-change: initial; -moz-window-dragging: initial; -moz-window-opacity: initial; -moz-window-transform: initial; -moz-window-transform-origin: initial; word-break: initial; word-spacing: initial; overflow-wrap: initial; writing-mode: initial; z-index: initial; display: initial !important; position: absolute !important; box-sizing: initial !important;" title="YouTube"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAE20lEQVRogdWVyW+TVxTFL0hGLKh1LVVCCtgk7226qdRFV911A5VA6qJAQklLNyUQoFIRkxgKAcQkiELiKAlx4ozEGezEsePY2NgJBAJpQqJMTQhVW3VUp3/hdFH5q5/fF7LtW/wWPu/e8875ZH+mZz0Mk6HxbsbfS9JIxrsZ9DTA+OsbaSRPAwx60sX4c0EayZMuBo11Mv6Yk0Yy1smgxx2M32elkTzuYNBoO+O3GWkko+0MGmlj/DotjWSkjUEjLYxfpqSRjLQwKONn/DwpjSTjZ1C6mfHThDSSdDOD0k2MH59LI0k3MSjlY/wwLo0k5WNQspHx/VNpJMlGBj1oYHw3Jo3kQQOD4vWMbx9JI4nXM2i4jvFqVFpMRoogPA6L/R868WpUwluxWdFzz16NSu1MeByr6sLjwBefuZBo91j7+f7eis1KLjuG6xg0XMtYyUiLRKsHRGRR5HZgJSNx7IBL0YkIGxzrsJKRmE8I7YyIsJKRtnouxw64bP2z+usYrmVQzMt4mZYW8Ra9wMu0fQEist3JPVurQHbOrkDW++twkZIxS8zLoKEaxnJKWgz79QLLKYmjn9oXGPZ7Vj1bTukFllMSGxzr1vR49+2NypzzjfVKzuWUxFANg4aqGUtJaRFr1gssJSWOfmIf8u6Fzdj5/ibbs6WkXmApKVHkdiharNmzqn8uXx17U8k6VM2gyF3GYkJaRH15BbY6sJiQOFKqXuDctB5EhCOlLhRtdShalsWEXmAxIa35LFGfR/Mv2eVEyS6noh0pdSlZI3cZNFjFWIhLi2ijXmAhLlGed0E2RG6Y/GALcb3AQtymQKNH8y8vddlquVkHqxgUrmTMx6RFpEEtULjVgfmYRPl+1ax4579PJ/d7mtWyzMf0AvMxicK8ApEGj+Zfvt9lq+VmDVcyaOAOYy4qLQbr9QJzUYnDH6tm+Z/ttLmoXmAuqhcYrPfY+ttpuVkH7jCo/zZjNiIswnVutcAWB2YjAof3qWb+6wXabyJ/Zjai/z/MRgQKt6gFwnVubffwPpetlpu1/zaDQrcYM2Fh0V+rF5gJCxwqUc3s5vJnZsJ6gZmwXqC/1q3tHipx2Wq5WUO3GBS8yZgeEBb9Xj3Y9IBAWZ7Z9IAabs8HzjVnsppWwOvWdstKXLZabtbgTQb13WC8CAmLUI1e4EVIoKxYNXsRUsOVFbvWnMlq+a/bUI1b27XzKyt2KVn7bjCo9zpjKigsgtVqgW0FDkwFBQ7uVc2mggLbCv57ksFqt+1MfoH88ESETGuhtrt7hxO7d6hvtYN7XUrW3usM6rnGmOwVFn1VeoHJXoGDe9QLJnvVAn1VbtuZ/LB22Pnbca+iQMnac41BgauMiW5h0VOpF5joFvh8t3pBvrbazOsCvfPWRqSaCm13P9ruVP5jtr+3Sck50S0QuMqgwBXG84D439Jd6UbSV2h7FrjCoK7LjGddwki6LjPofgVjvFMYyf0KBnVeYjxpF0bSeYlBHRcZY23CSDouMqj9AuNxizCS9gsMajvPeOQXRtJ2nkGt5xijTcJIWs8xqOUsY8QnjKTlLIP8Zxjpe8JI/GcY1Hya8bBeGEnzaQY1nWKk6oSRNJ1ikO8kI1krjMR3kkGNJxgPvMJIGk8wqOE4I14tjKThOIPqv2SYzD/ZLZPkdY1wuAAAAABJRU5ErkJggg==" style="place-content: initial; place-items: initial; place-self: initial; animation: initial; -moz-appearance: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; -moz-binding: initial; block-size: initial; border-block-end: initial; border-block-start: initial; border: initial; border-radius: 0px !important; border-collapse: initial; border-inline-end: initial; border-inline-start: initial; border-spacing: initial; bottom: initial; -moz-box-align: initial; box-decoration-break: initial; -moz-box-direction: initial; -moz-box-flex: initial; -moz-box-ordinal-group: initial; -moz-box-orient: initial; -moz-box-pack: initial; box-shadow: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color: initial; color-adjust: initial; color-interpolation: initial; color-interpolation-filters: initial; columns: initial; column-fill: initial; column-gap: initial; column-rule: initial; content: initial; -moz-context-properties: initial; -moz-control-character-visibility: initial; counter-increment: initial; counter-reset: initial; cursor: pointer !important; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; -moz-float-edge: initial; flood-color: initial; flood-opacity: initial; font: initial; font-synthesis: initial; -moz-force-broken-image-icon: initial; grid: initial; grid-area: initial; height: 24px !important; hyphens: initial; image-orientation: initial; -moz-image-region: initial; image-rendering: initial; ime-mode: initial; inline-size: initial; isolation: initial; left: 161.4px !important; letter-spacing: initial; lighting-color: initial; list-style: initial; margin-block-end: initial; margin-block-start: initial; margin: initial; margin-inline-end: initial; margin-inline-start: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset-block-end: initial; offset-block-start: initial; offset-inline-end: initial; offset-inline-start: initial; opacity: initial; order: initial; -moz-orient: initial; outline: initial; outline-offset: initial; -moz-outline-radius: initial; overflow: initial; padding-block-end: initial; padding-block-start: initial; padding: 4px 2px !important; padding-inline-end: initial; padding-inline-start: initial; page-break-after: initial; page-break-before: initial; page-break-inside: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: auto !important; quotes: initial; resize: initial; right: initial; ruby-align: initial; ruby-position: initial; scroll-behavior: initial; scroll-snap-coordinate: initial; scroll-snap-destination: initial; scroll-snap-points-x: initial; scroll-snap-points-y: initial; scroll-snap-type: initial; shape-rendering: initial; -moz-stack-sizing: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; -moz-tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-emphasis: initial; text-emphasis-position: initial; -webkit-text-fill-color: initial; text-indent: initial; text-justify: initial; text-orientation: initial; text-overflow: initial; text-rendering: initial; text-shadow: initial; -moz-text-size-adjust: initial; -webkit-text-stroke: initial; text-transform: initial; top: 1px !important; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; -moz-user-focus: initial; -moz-user-input: initial; -moz-user-modify: initial; -moz-user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; white-space: initial; width: 24px !important; will-change: initial; -moz-window-dragging: initial; -moz-window-opacity: initial; -moz-window-transform: initial; -moz-window-transform-origin: initial; word-break: initial; word-spacing: initial; overflow-wrap: initial; writing-mode: initial; z-index: initial; display: initial !important; position: absolute !important; box-sizing: initial !important;" title="IMDB"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADH0lEQVRoge1Z7Y3sIAwkVdAGXdACHaQDWkgFFJEKUgIl0AJV4PdrIuAIOMmusnvvTrJ00jrB4xl/oAjR+Usp0SdYL8aPDfoSmKeDuwXi6aBugXg6mNsgng7k/wbwdBC3QTwdwB+ApwP4A4B/tNaklCKlFGmtyRhTWP67tZZSSmx/7z2t63roD9/Re+FnjPkJwHtP1lpSStE0TU2TUtKyLOS9p5QSbdtG8zwXPkIIEkLQNE00zzOt60opJQohkHOOtNY//LXW5JyjEMLhe/Pz4deUUIyRrLV7EPnDMcYmjeu6kpSyeGZZlqZvCKFIknPuUB7Lsux+Wuvm+c0aiDGSMaYAkNPWMmttwQDk0Hu3tfYwKUgMkpdnnVXE27YVWVVKdQ/z3heZPWLMe09SSlJKHQYFc86REOKQzS6AGCPN87xnVAhB27axWOjJY1kWEkLstdE7H0WLmjsFoNa2EIKUUt1DoW+wVrOA7B/puVZAT4osAMhCzkIvGy0WcvrRWTjZN8aQlHLI+nCQOeeKgLTWQxaklHtBgwXvPasZgCmu7xBAjHGXBWxUfHUPt9ayM4o64TDFApDLAgBGmQELeS1gsHEShi7FiY0FIJcFbFSExphisPV6eUuyvQF3GgACygGMshlCKNaF3iTPDdnn+J4CgBbIWS2OQI9a4rquw8F1GUBKaZ+0kMbooLqYR9NXa81m6hKAbdsKWfQKLZcQhwXvPQkhWIV+GQA0msvoqNggHyxk+RxpsQB/TqHfAoAFC9YabBhEyCY60pH0wBZncN0GkLOA7lIPnFrLdUeqawG1cjb7lwFgo2zdFdBJamnVHQm/Y3CNVpSXAsChkIWUcl/ysALXnQSyyjtSjHFfG0ZL4ksBpJSKayd6N6Zoa4fB/aJmARf4q3FcBhBCKIpZSjnc9fM2jC7Gudy8BUDr3jxNU3fbxDM58DNrw0sBtHTNGUL1XOAubW8BgBsb5MDZ9XPmuBvq2wAgo5y7a24o9jPPvA1ACIGstafaIDrS1db5UgBP21d/pfkd38h+BYBvBNH6WP81IJrBfwuIbvCfCqYX4z8UwrBWOPp89wAAAABJRU5ErkJggg==" style="place-content: initial; place-items: initial; place-self: initial; animation: initial; -moz-appearance: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; -moz-binding: initial; block-size: initial; border-block-end: initial; border-block-start: initial; border: initial; border-radius: 0px !important; border-collapse: initial; border-inline-end: initial; border-inline-start: initial; border-spacing: initial; bottom: initial; -moz-box-align: initial; box-decoration-break: initial; -moz-box-direction: initial; -moz-box-flex: initial; -moz-box-ordinal-group: initial; -moz-box-orient: initial; -moz-box-pack: initial; box-shadow: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color: initial; color-adjust: initial; color-interpolation: initial; color-interpolation-filters: initial; columns: initial; column-fill: initial; column-gap: initial; column-rule: initial; content: initial; -moz-context-properties: initial; -moz-control-character-visibility: initial; counter-increment: initial; counter-reset: initial; cursor: pointer !important; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; -moz-float-edge: initial; flood-color: initial; flood-opacity: initial; font: initial; font-synthesis: initial; -moz-force-broken-image-icon: initial; grid: initial; grid-area: initial; height: 24px !important; hyphens: initial; image-orientation: initial; -moz-image-region: initial; image-rendering: initial; ime-mode: initial; inline-size: initial; isolation: initial; left: 189.4px !important; letter-spacing: initial; lighting-color: initial; list-style: initial; margin-block-end: initial; margin-block-start: initial; margin: initial; margin-inline-end: initial; margin-inline-start: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset-block-end: initial; offset-block-start: initial; offset-inline-end: initial; offset-inline-start: initial; opacity: initial; order: initial; -moz-orient: initial; outline: initial; outline-offset: initial; -moz-outline-radius: initial; overflow: initial; padding-block-end: initial; padding-block-start: initial; padding: 4px 2px !important; padding-inline-end: initial; padding-inline-start: initial; page-break-after: initial; page-break-before: initial; page-break-inside: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: auto !important; quotes: initial; resize: initial; right: initial; ruby-align: initial; ruby-position: initial; scroll-behavior: initial; scroll-snap-coordinate: initial; scroll-snap-destination: initial; scroll-snap-points-x: initial; scroll-snap-points-y: initial; scroll-snap-type: initial; shape-rendering: initial; -moz-stack-sizing: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; -moz-tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-emphasis: initial; text-emphasis-position: initial; -webkit-text-fill-color: initial; text-indent: initial; text-justify: initial; text-orientation: initial; text-overflow: initial; text-rendering: initial; text-shadow: initial; -moz-text-size-adjust: initial; -webkit-text-stroke: initial; text-transform: initial; top: 1px !important; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; -moz-user-focus: initial; -moz-user-input: initial; -moz-user-modify: initial; -moz-user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; white-space: initial; width: 24px !important; will-change: initial; -moz-window-dragging: initial; -moz-window-opacity: initial; -moz-window-transform: initial; -moz-window-transform-origin: initial; word-break: initial; word-spacing: initial; overflow-wrap: initial; writing-mode: initial; z-index: initial; display: initial !important; position: absolute !important; box-sizing: initial !important;" title="Wikipedia (en)"></swift-selection-search-popup></html>

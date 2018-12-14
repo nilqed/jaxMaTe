@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<!-- @STYLE SECTION -->
+<style>
+html, body {
+background-color: white;
+color: black;
+font-family: monospace;
+margin:  0;
+padding: 0;
+margin-bottom: 25px;
+}
+/* The console container element */
+/*#console {
+height: 400px;
+width: 750px;
+position:relative;
+background-color: black;
+border: 2px solid #CCC;
+margin: 0 auto;
+margin-top: 50px;
+} */
+
+/*
+#console {
+height: 400px;
+width: 750px;
+position:relative; 
+background-color: yellow;
+border: 2px solid #CCC;
+margin: 0 auto;
+margin-bottom: 50px;
+}
+*/
+
+/* The inner console element. */
+.jqconsole {
+padding: 10px;
+}
+/* The cursor. */
+.jqconsole-cursor {
+background-color: gray;
+}
+/* The cursor color when the console looses focus. */
+.jqconsole-blurred .jqconsole-cursor {
+background-color: #666;
+}
+/* The current prompt text color */
+.jqconsole-prompt {
+color: #00f;
+}
+/* The command history */
+.jqconsole-old-prompt {
+color: #b00;
+font-weight: normal;
+}
+/* The text color when in input mode. */
+.jqconsole-input {
+color: #d00;
+}
+/* Previously entered input. */
+.jqconsole-old-input {
+color: #b00;
+font-weight: normal;
+}
+/* The text color of the output. */
+.jqconsole-output {
+color: blue;
+}
+</style>
+
+<!-- SCRIPT CONFIG VARS -->
+<script>
+jxmt_start_msg="This is jaxmate-devel V 0.2 (node pure_Server/MathJax)\n\n\n";
+jxmt_prompt="> ";
+jxmt_cfg_prefix="@";
+jxmt_div_prefix='MathDiv';
+jxmt_text_output=true;
+jxmt_mathjax_output=true;
+</script>
+
+<!-- @SCRIPT MATHJAX CONFIG -->
+<!-- http://docs.mathjax.org/en/latest/configuration.html -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax:{inlineMath:[['$','$']]},
+    CommonHTML: { linebreaks: { automatic: true }, scale: 130 },
+    "HTML-CSS": { linebreaks: { automatic: true }, fonts: ["TeX"], scale: 130},
+    SVG: { linebreaks: { automatic: true } }});
+</script>
+
+<!-- @SCRIPT MATHJAX CDN 
+<script 
+  src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/
+       latest.js?config=TeX-AMS-MML_HTMLorMML' async>
+</script>
+-->
+
+<title>Pure Client</title>
+</head>
+
+<body>
+
+<!-- @DIV CONSOLE -->
+<div id="console"></div>  
+
+<!-- -->
+<script src="/static/socket.io-client/dist/socket.io.js"></script>
+<script src="/static/jquery/dist/jquery.js"></script>
+<script src="/static/jq-console/lib/jqconsole.js"></script>
+<script src="/static/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+
+<script>
+    var socket = io('http://localhost:3010');
+    socket.on('connect', function(){socket.emit('do something',{})});
+    socket.on('myevent', function(data){});
+    socket.on('disconnect', function(){});
+</script>
+
+
+<!-- @SCRIPT START -->
+<script>
+  $(function () {
+    var jqconsole = $('#console').jqconsole(jxmt_start_msg, jxmt_prompt);
+    var idc=0; // div id counter
+    var out={id:"",data:""}; // data format
+    
+    function jxmt_cfg_handler (s) {
+      jqconsole.SetPromptLabel('cfg> ')
+      jqconsole.Write("cfg\n", 'jqconsole-output');
+      
+      if (s=="@text off") {jxmt_text_output=false;};
+      if (s=="@text on") {jxmt_text_output=true;};
+      if (s=="@quit") {jqconsole.SetPromptLabel(jxmt_prompt);};
+    };
+
+    // Output coming from server (after emission of 'pure_eval')
+    socket.on('pure_output', function(data){ out=data; 
+      if (jxmt_text_output) 
+      {
+            jqconsole.Write(out.data + '\n', 'jqconsole-output');
+      };
+      if (jxmt_mathjax_output)
+      {
+            document.getElementById(out.id).innerHTML=out.data;
+            MathJax.Hub.Queue(["Typeset",MathJax.Hub,out.id]);
+      };
+            //https://www.w3schools.com/jsref/met_element_scrollintoview.asp
+            document.getElementById(out.id).scrollIntoView();  //cool
+    });
+    
+    var startPrompt = function () {
+      // Start the prompt with history enabled.
+      jqconsole.Prompt(true, function (input) {
+        // Output srvdata with the class jqconsole-output.
+        // div counter
+        var divID=jxmt_div_prefix + idc;
+        // cfg_handler
+        if (input.startsWith(jxmt_cfg_prefix)) 
+          {jxmt_cfg_handler(input);startPrompt();}
+        else
+         {
+           socket.emit('pure_eval',{id:divID,data:input}); // socket emit -> send input
+           //jqconsole.Write(out.data + '\n', 'jqconsole-output');
+           jqconsole.Append($('<div id=' + divID + '></div>'));
+           //MathJax.Hub.Queue(["Typeset",MathJax.Hub,divID]);
+           idc++;
+           // Restart the prompt.
+           startPrompt();};
+      });
+    };
+    startPrompt();
+  });
+</script>
+
+</body>
+</html>
